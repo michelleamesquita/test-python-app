@@ -14,7 +14,7 @@ ADD requirements.txt .
 RUN pip install -r requirements.txt
 
 ADD chromedriver .
-RUN chmod +x chromedriver
+RUN chmod u+x chromedriver
 
 # ADD app.py .
 ADD app.py .
