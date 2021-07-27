@@ -2,7 +2,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-site_url = 'http://10.5.0.5:8085/'
+site_url = 'http://app-myproject.192.168.99.100.nip.io/'
 
 class PythonOrgSearch(unittest.TestCase):
 
