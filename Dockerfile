@@ -1,5 +1,7 @@
 FROM python:3.6.8-stretch
 
+USER root
+
 COPY . . 
 
 RUN apt update && apt install -y gdebi-core libnss3 libgconf-2-4
