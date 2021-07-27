@@ -17,7 +17,8 @@ RUN chmod +x chromedriver
 # ADD app.py .
 ADD test.py .
 
-CMD python3 test.py
+# CMD python3 test.py
+RUN python3 test.py
 
 # CMD python3 app.py & python3 test.py
 
