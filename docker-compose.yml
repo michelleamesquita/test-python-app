@@ -10,7 +10,7 @@ app:
   build:
     context: .
   volumes:
-   - ./app:/app
+   - ./:/app
   command: sh -c "python3 app.py"
   depends_on:
    - selenium 
