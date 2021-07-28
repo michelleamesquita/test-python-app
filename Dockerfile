@@ -16,9 +16,9 @@ RUN pip install -r requirements.txt
 ADD chromedriver .
 #RUN chmod +x chromedriver
 
-RUN mv chromedriver /bin/chromedriver
-RUN root:root /bin/chromedriver
-RUN chmod a+x /bin/chromedriver
+RUN mv chromedriver /usr/bin/chromedriver
+RUN root:root /usr/bin/chromedriver
+RUN chmod a+x /usr/bin/chromedriver
 
 
 # ADD app.py .
