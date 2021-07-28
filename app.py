@@ -13,7 +13,7 @@ class PythonOrgSearch(unittest.TestCase):
         chrome_opt.add_argument('--headless')
         chrome_opt.add_argument('--no-sandbox')
 
-        self.driver =  webdriver.Chrome('/chromedriver', options=chrome_opt)
+        self.driver =  webdriver.Chrome('./chromedriver', options=chrome_opt)
         self.url = site_url
 
     def test_temp_celsius(self):
