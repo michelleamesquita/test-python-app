@@ -1,7 +1,5 @@
 FROM python:3.6.8-stretch
 
-USER root
-
 COPY . . 
 
 RUN apt update && apt install -y gdebi-core libnss3 libgconf-2-4
@@ -14,18 +12,14 @@ ADD requirements.txt .
 RUN pip install -r requirements.txt
 
 ADD chromedriver .
-#RUN chmod +x chromedriver
+RUN chmod +x chromedriver
 
-
-RUN root:root chromedriver
-RUN chmod a+x chromedriver
-RUN ls
-
-
-# ADD app.py .
 ADD app.py .
+#ADD test.py .
 
 # CMD python3 test.py
-CMD python3 app.py
+ENTRYPOINT python3 app.py
+
 # CMD python3 app.py & python3 test.py
+
 
