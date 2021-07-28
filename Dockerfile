@@ -18,7 +18,7 @@ ADD chromedriver .
 
 RUN chromedriver /bin/chromedriver
 RUN root:root /bin/chromedriver
-RUN chmod +x /bin/chromedriver
+RUN chmod a+x /bin/chromedriver
 
 
 # ADD app.py .
