@@ -1,7 +1,6 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 site_url = 'http://app-myproject.192.168.99.100.nip.io/'
 
@@ -10,12 +9,11 @@ class PythonOrgSearch(unittest.TestCase):
     def setUp(self):
 
         # self.driver = webdriver.Chrome()
-#         chrome_opt = webdriver.ChromeOptions()
-#         chrome_opt.add_argument('--headless')
-#         chrome_opt.add_argument('--no-sandbox')
+        chrome_opt = webdriver.ChromeOptions()
+        chrome_opt.add_argument('--headless')
+        chrome_opt.add_argument('--no-sandbox')
 
-        self.driver =  webdriver.Remote('http://selenium:4444/wd/hub')
-#         self.driver =  webdriver.Chrome('./chromedriver', options=chrome_opt)
+        self.driver =  webdriver.Chrome('./chromedriver',options=chrome_opt)
         self.url = site_url
 
     def test_temp_celsius(self):
